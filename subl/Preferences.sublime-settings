@@ -1,0 +1,52 @@
+{
+  "bold_folder_labels": true,
+  "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+  "ensure_newline_at_eof_on_save": true,
+  "file_exclude_patterns":
+  [
+    "*.min.js",
+    "*.min.css",
+    "*.css.map"
+  ],
+  "folder_exclude_patterns":
+  [
+    ".meteor/local",
+    ".em",
+    ".git",
+    ".tmp",
+    ".sass-cache",
+    "bower_components",
+    "node_modules",
+    "vendor",
+    "grunt",
+    "build",
+    "dist",
+    "gulp",
+    "*.map",
+    ".htaccess"
+  ],
+  "font_face": "Menlo",
+  "font_size": 13,
+  "highlight_line": 14,
+  "ignored_packages":
+  [
+    "Blade Snippets",
+    "CSS",
+    "Vintage"
+  ],
+  "line_padding_bottom": 2,
+  "line_padding_top": 2,
+  "original_color_scheme": "Packages/User/Monokai Soda (SL).tmTheme",
+  "rulers":
+  [
+    80
+  ],
+  "save_on_focus_lost": false,
+  "scroll_past_end": true,
+  "show_full_path": true,
+  "tab_size": 2,
+  "theme": "City-Lights.sublime-theme",
+  "translate_tabs_to_spaces": true,
+  "trim_automatic_white_space": true,
+  "trim_trailing_white_space_on_save": true
+}
