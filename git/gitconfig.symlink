@@ -9,6 +9,7 @@
     # Commit
     cm = commit -m
     ca = commit --amend
+    can = commit --amend --no-edit
 
     # Checkout
     co = checkout
@@ -111,7 +112,7 @@
   default = simple
 [core]
   excludesfile = ~/.gitignore
-  editor = sublime
+  editor = vim
 
 [apply]
   whitespace = fix
