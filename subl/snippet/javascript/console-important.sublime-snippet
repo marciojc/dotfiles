@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+console.log( '%c%s %s %s', 'color: brown; font-weight: bold; text-decoration: underline;', '--', $1, '--');
+]]></content>
+    <tabTrigger>important</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
