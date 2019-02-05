@@ -1,0 +1,5 @@
+<snippet>
+   <content><![CDATA[outline: 1px solid red;]]></content>
+   <tabTrigger>ol</tabTrigger>
+   <scope>source.css, source.sass, source.scss</scope>
+</snippet>
