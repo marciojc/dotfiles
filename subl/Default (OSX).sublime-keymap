@@ -1,0 +1,10 @@
+[
+    { "keys": ["super+ctrl+a"], "command": "alignment" },
+    {
+           "keys": ["super+shift+a"], "command": "align_tab",
+           "args" : {"user_input" : "\\s*/l1l0"}
+    },
+    { "keys": ["super+v"], "command": "paste_and_indent" },
+    { "keys": ["super+shift+v"], "command": "paste" },
+    { "keys": ["super+shift+\\"], "command": "reveal_in_side_bar"}
+]
