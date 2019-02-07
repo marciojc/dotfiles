@@ -87,3 +87,5 @@ alias reload="exec $SHELL -l"
 alias path='echo -e ${PATH//:/\\n}'
 
 alias hosts.edit="subl /etc/hosts"
+
+alias dc="docker-compose $*"
