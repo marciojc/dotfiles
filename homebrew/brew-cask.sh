@@ -24,15 +24,19 @@ brew cask install postman
 brew cask install devdogs
 brew cask install gimp
 brew cask install slack
+brew cask install microsoft-teams
 brew cask install docker
+brew cask install dropbox
+brew cask install sketch
 # brew cask install android-studio
 
-brew cask info github
-brew cask info virtualbox
-brew cask info cyberduck
+brew cask install github
+brew cask install virtualbox
+brew cask install cyberduck
 
 # browsers
 brew cask install google-chrome
+brew cask install firefox
 # brew cask install google-chrome-canary
 # brew cask install firefoxnightly
 # brew cask install webkit-nightly
@@ -42,7 +46,7 @@ brew cask install google-chrome
 # others
 brew cask install spotify
 brew cask install appcleaner
-brew cask info 1clipboard
+brew cask install 1clipboard
 
 # Not on cask but I want regardless.
 
