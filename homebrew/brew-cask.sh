@@ -47,6 +47,10 @@ brew cask install spotify
 brew cask install appcleaner
 brew cask install 1clipboard
 
+# Install Nerd Fonts
+brew tap caskroom/fonts
+brew cask install font-hack-nerd-font
+
 # Not on cask but I want regardless.
 
 # File Multi Tool 5
