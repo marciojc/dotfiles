@@ -12,7 +12,6 @@ brew install caskroom/cask/brew-cask
 
 # daily
 brew cask install spectacle
-brew cask install flux
 
 # dev
 brew cask install iterm2

@@ -34,6 +34,7 @@ brew install homebrew/dupes/screen
 
 brew install git
 brew install terminal-notifier
+brew install nvm
 
 brew install zsh
 
