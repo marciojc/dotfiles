@@ -1,0 +1,39 @@
+{
+  "bootstrapped": true,
+  "in_process_packages":
+  [
+  ],
+  "installed_packages":
+  [
+    "Alignment",
+    "AlignTab",
+    "Babel",
+    "DocBlockr",
+    "EditorConfig",
+    "Emmet",
+    "ESLint",
+    "Git",
+    "Git Conflict Resolver",
+    "GitGutter",
+    "HTMLBeautify",
+    "JsPrettier",
+    "Laravel Blade Highlighter",
+    "Package Control",
+    "PackageResourceViewer",
+    "Phpcs",
+    "SCSS",
+    "SideBarEnhancements",
+    "SublimeCodeIntel",
+    "SublimeLinter",
+    "SublimeLinter-contrib-scss-lint",
+    "SublimeLinter-eslint",
+    "SublimeLinter-php",
+    "SublimeLinter-tslint",
+    "Theme - City Lights",
+    "Themr",
+    "TodoReview",
+    "TypeScript Syntax",
+    "Vue Syntax Highlight",
+    "Vuetify"
+  ]
+}
