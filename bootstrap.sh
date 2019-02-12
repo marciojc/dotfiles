@@ -13,11 +13,11 @@ cp git/gitignore_global.symlink ~/.gitignore
 
 echo "Zsh..."
 ./zsh/oh-my-zsh.sh
-cp zsh/.aliases ~/.aliases
-cp zsh/.functions ~/.functions
-cp zsh/.theme ~/.theme
-cp zsh/.theme ~/.theme
-cp zsh/.zprofile ~/.zprofile
+cp zsh/aliases.zsh ~/.aliases
+cp zsh/functions.zsh ~/.functions
+cp zsh/theme.zsh ~/.theme
+cp zsh/theme.zsh ~/.theme
+cp zsh/zprofile.zsh ~/.zprofile
 cp zsh/.zshrc.symlink ~/.zshrc
 
 echo "Sublime..."
