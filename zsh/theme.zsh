@@ -7,6 +7,7 @@ local user="%(!.%{$fg_bold[green]%}.%{$fg_bold[green]%})%n%{$reset_color%}"
 local pwd="%{$fg[green]%}%c%{$reset_color%}"
 
 PROMPT='${user} ${pwd}$(git_super_status) » '
+RPROMPT=''
 ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
