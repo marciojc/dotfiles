@@ -91,6 +91,9 @@ source ~/.theme
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# history
+SAVEHIST=100000
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 source ~/.aliases
