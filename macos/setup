@@ -17,6 +17,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+# Enable Dark mode
+osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to true'
+
+
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/Lisbon" > /dev/null
 
