@@ -55,3 +55,14 @@ brew cask install font-hack-nerd-font
 
 # File Multi Tool 5
 # Phosphor
+
+# Quick Look plugins
+# See https://github.com/sindresorhus/quick-look-plugins
+
+# Preview source code files with syntax highlighting
+brew cask install qlcolorcode
+# Preview plain text files without or with unknown file extension. Example: README, CHANGELOG, index.styl, etc.
+brew cask install qlstephen
+# Preview JSON files
+brew cask install quicklook-json
+
