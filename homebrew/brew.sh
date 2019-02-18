@@ -30,14 +30,11 @@ if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
   chsh -s "${BREW_PREFIX}/bin/bash";
 fi;
 
-brew install homebrew/completions/brew-cask-completion
-
 # Install wget with IRI support
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools
 brew install vim --with-override-system-vi
-brew install homebrew/dupes/nano
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen

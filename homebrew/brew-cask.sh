@@ -66,3 +66,5 @@ brew cask install qlstephen
 # Preview JSON files
 brew cask install quicklook-json
 
+# Remove outdated versions from the cellar
+brew cleanup
