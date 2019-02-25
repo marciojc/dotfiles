@@ -65,6 +65,7 @@ brew cask install qlcolorcode
 brew cask install qlstephen
 # Preview JSON files
 brew cask install quicklook-json
+brew cask install qlimagesize
 
 # Remove outdated versions from the cellar
 brew cleanup
