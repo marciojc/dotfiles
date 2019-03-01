@@ -29,7 +29,7 @@ brew cask install dropbox
 brew cask install sketch
 # brew cask install android-studio
 
-brew cask install github
+brew cask install fork
 brew cask install virtualbox
 brew cask install cyberduck
 
