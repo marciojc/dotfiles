@@ -42,6 +42,7 @@ brew install homebrew/dupes/screen
 # Install other useful binaries
 
 brew install git
+# brew install git-lfs
 brew install terminal-notifier
 brew install nvm
 
