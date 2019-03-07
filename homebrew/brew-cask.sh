@@ -31,7 +31,9 @@ brew cask install sketch
 
 brew cask install fork
 brew cask install virtualbox
+brew cask install virtualbox-extension-pack
 brew cask install cyberduck
+# brew cask install tunnelblick
 
 # browsers
 brew cask install google-chrome
