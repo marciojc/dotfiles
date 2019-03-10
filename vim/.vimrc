@@ -22,8 +22,21 @@ call plug#begin('~/.vim/plugged')
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
-Plug 'scrooloose/nerdtree'
+" NERDTree
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
 Plug 'airblade/vim-gitgutter'
+
+" JavaScript Highlight & Improved Indentation
+Plug 'pangloss/vim-javascript'
+
+" .editorconfig
+Plug 'editorconfig/editorconfig-vim'
+
+" emmet
+Plug 'mattn/emmet-vim'
+
+Plug 'ctrlpvim/ctrlp'
 
 " Initialize plugin system
 call plug#end()
@@ -80,6 +93,17 @@ set title
 " Show the (partial) command as it’s being typed
 set showcmd
 
+" dont use arrowkeys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+" really, just dont
+inoremap <Up>    <NOP>
+inoremap <Down>  <NOP>
+inoremap <Left>  <NOP>
+inoremap <Right> <NOP>
+
 "" NERDTree configuration
 let g:NERDTreeChDirMode=2
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
@@ -88,9 +112,30 @@ let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 50
+
+" Open NERDTree automatically when vim starts up
+" autocmd vimenter * NERDTree
+" NERDTree
+let NERDTreeShowHidden=1
+map <silent> <C-n> :NERDTreeToggle<CR
+
+
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+" make emmet behave well with JSX in JS and TS files
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx, vue',
+\  },
+\  'typescript' : {
+\      'extends' : 'tsx',
+\  },
+\}
+
+" only show files that are not ignored by git
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
