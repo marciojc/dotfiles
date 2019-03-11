@@ -38,6 +38,9 @@ Plug 'mattn/emmet-vim'
 
 Plug 'ctrlpvim/ctrlp'
 
+" indentLine
+Plug 'Yggdroot/indentLine'
+
 " Initialize plugin system
 call plug#end()
 
@@ -103,6 +106,11 @@ inoremap <Up>    <NOP>
 inoremap <Down>  <NOP>
 inoremap <Left>  <NOP>
 inoremap <Right> <NOP>
+" Get off my lawn (LOL)
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 "" NERDTree configuration
 let g:NERDTreeChDirMode=2
@@ -137,5 +145,14 @@ let g:user_emmet_settings = {
 \  },
 \}
 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " only show files that are not ignored by git
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" indentLine
+let g:indentLine_enabled = 1
+let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_color_term = 239
+let g:indentLine_char = '¦'
+let g:indentLine_leadingSpaceChar = '⋅'
