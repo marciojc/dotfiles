@@ -90,7 +90,7 @@
     rank-contributers = !"git shortlog -s -n --no-merges"
     open-unmerged     = !git diff --name-only --diff-filter=U | xargs subl
     up                = "!git remote update -p; git merge --ff-only @{u}"
-    resume            = !"git log --since=1.day --abbrev-commit --author=\"<$(git config user.email)>\" --format=%s"
+    resume            = !"git log --since=8.hours --abbrev-commit --author=\"<$(git config user.email)>\" --format=%s --reverse"
     add-tag           = tag
     remove-tag        = tag -d
 [color]
