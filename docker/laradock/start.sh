@@ -2,7 +2,7 @@
 clear
 export FOLDER=`pwd`
 
-cd '/Users/~/Sites/laravel/laradock'
+cd $LARADOCK
 
 echo 'Starting Docker'
 docker-compose up -d nginx mysql phpmyadmin workspace
