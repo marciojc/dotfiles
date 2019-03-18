@@ -6,5 +6,7 @@
     },
     { "keys": ["super+v"], "command": "paste_and_indent" },
     { "keys": ["super+shift+v"], "command": "paste" },
-    { "keys": ["super+shift+\\"], "command": "reveal_in_side_bar"}
+    { "keys": ["super+shift+\\"], "command": "reveal_in_side_bar"},
+    { "keys": ["alt+shift+i"], "command": "import_namespace" },
+    { "keys": ["alt+enter"], "command": "find_use" }
 ]
