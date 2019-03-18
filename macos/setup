@@ -35,13 +35,15 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 ## Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 
+# Close System Preferences to prevent interference
+osascript -e 'tell application "System Preferences" to quit'
 # Change "Move focus to next window" shortcut to ⌥⇥
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 "{enabled = 1; value = { parameters = (65535, 48, 524288); type = 'standard'; }; }"
 
 # Change "Move focus to next window" shortcut to ⌥⇥
-#/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:0 65535" ~/Library/Preferences/com.apple.symbolichotkeys.plist
-#/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:1 48" ~/Library/Preferences/com.apple.symbolichotkeys.plist
-#/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:2 524288" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+# /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:0 65535" $HOME/Library/Preferences/com.apple.symbolichotkeys.plist
+# /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:1 48" $HOME/Library/Preferences/com.apple.symbolichotkeys.plist
+# /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:2 524288" $HOME/Library/Preferences/com.apple.symbolichotkeys.plist
 
 ###############################################################################
 # Screen                                                                      #
