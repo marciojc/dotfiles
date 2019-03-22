@@ -6,6 +6,7 @@ echo "Brew..."
 ./homebrew/install.sh
 ./homebrew/brew.sh
 ./homebrew/brew-cask.sh
+./homebrew/brew-mas.sh
 
 echo "Git..."
 cp git/gitconfig.symlink ~/.gitconfig
