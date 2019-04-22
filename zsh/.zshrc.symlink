@@ -55,6 +55,7 @@ plugins=(
   osx
   zsh-autosuggestions
   zsh-syntax-highlighting
+  wakatime
 )
 
 # User configuration
@@ -100,6 +101,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 source ~/.aliases
 source ~/.functions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/docker/aliases.zsh
 
 export NVM_DIR="$HOME/.nvm"
