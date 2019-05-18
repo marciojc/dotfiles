@@ -93,6 +93,9 @@ source ~/.theme
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# homebrew
+export HOMEBREW_NO_ANALYTICS=1
+
 # history
 SAVEHIST=100000
 
