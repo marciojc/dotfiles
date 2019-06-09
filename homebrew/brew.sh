@@ -18,11 +18,13 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
-
-# Bash 4
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew install findutils
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew install gnu-sed --with-default-names
+# Install Bash 4.
 brew install bash
-brew install bash-completion@2
+brew install bash-completion2
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
@@ -35,9 +37,9 @@ brew install wget --with-iri
 
 # Install more recent versions of some OS X tools
 brew install vim --with-override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+brew install grep
+brew install openssh
+brew install screen
 
 # Install other useful binaries
 
