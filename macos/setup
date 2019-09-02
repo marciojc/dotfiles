@@ -43,6 +43,19 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 "{ena
 # /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:1 48" $HOME/Library/Preferences/com.apple.symbolichotkeys.plist
 # /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:2 524288" $HOME/Library/Preferences/com.apple.symbolichotkeys.plist
 
+# ###############################################################################
+# Energy saving                                                               #
+###############################################################################
+
+# Restart automatically if the computer freezes
+sudo systemsetup -setrestartfreeze on
+
+# Sleep the display after 15 minutes
+sudo pmset -a displaysleep 15
+
+# Set machine sleep to 5 minutes on battery
+sudo pmset -b sleep 5
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
