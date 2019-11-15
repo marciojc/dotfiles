@@ -17,9 +17,8 @@ echo "Zsh..."
 cp zsh/aliases.zsh ~/.aliases
 cp zsh/functions.zsh ~/.functions
 cp zsh/theme.zsh ~/.theme
-cp zsh/theme.zsh ~/.theme
 cp zsh/zprofile.zsh ~/.zprofile
 cp zsh/.zshrc.symlink ~/.zshrc
 
 echo "Sublime..."
-./sublime/sublime.sh
+./subl/sublime.sh
