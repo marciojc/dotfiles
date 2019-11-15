@@ -17,19 +17,19 @@ brew cask install sublime-text
 brew cask install imageoptim
 brew cask install sequel-pro
 brew cask install postman
-brew cask install devdogs
-brew cask install gimp
+# brew cask install devdogs
+# brew cask install gimp
 brew cask install slack
 brew cask install microsoft-teams
 brew cask install docker
-brew cask install dropbox
+# brew cask install dropbox
 brew cask install sketch
 # brew cask install android-studio
 
-brew cask install fork
-brew cask install virtualbox
-brew cask install virtualbox-extension-pack
-brew cask install cyberduck
+# brew cask install fork
+# brew cask install virtualbox
+# brew cask install virtualbox-extension-pack
+# brew cask install cyberduck
 # brew cask install tunnelblick
 
 # browsers
@@ -43,8 +43,8 @@ brew cask install firefox
 
 # others
 brew cask install spotify
-brew cask install appcleaner
-brew cask install 1clipboard
+# brew cask install appcleaner
+# brew cask install 1clipboard
 
 # Install Nerd Fonts
 brew tap homebrew/cask-fonts
