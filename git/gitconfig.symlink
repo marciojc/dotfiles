@@ -4,110 +4,110 @@
 [github]
   user = marcio
 [alias]
-    # Add
-    a = add
-    # Commit
-    cm = commit -m
-    ca = commit --amend
-    can = commit --amend --no-edit
+  # Add
+  a = add
+  # Commit
+  cm = commit -m
+  ca = commit --amend
+  can = commit --amend --no-edit
 
-    # Checkout
-    co = checkout
-    cb = checkout -b
+  # Checkout
+  co = checkout
+  cb = checkout -b
 
-    # Cherry-pick
-    cp = cherry-pick
-    cpc = cherry-pick --continue
-    cpa = cherry-pick --abort
+  # Cherry-pick
+  cp = cherry-pick
+  cpc = cherry-pick --continue
+  cpa = cherry-pick --abort
 
-    #Rebase
-    rbc = rebase --continue
-    rba = rebase --abort
+  #Rebase
+  rbc = rebase --continue
+  rba = rebase --abort
 
-    # Diff
-    df = diff
+  # Diff
+  df = diff
 
-    # List
-    tl = tag -l
-    bl = branch -a
-    rl = remote -v
+  # List
+  tl = tag -l
+  bl = branch -a
+  rl = remote -v
 
-    # Status
-    st = status -s
-    sl = stash list
+  # Status
+  st = status -s
+  sl = stash list
 
-    # Pull
-    pl   = pull
-    plo  = pull --rebase origin
-    plom = pull --rebase origin master
-    plog = pull --rebase origin gh-pages
-    plu  = pull --rebase upstream
-    plum = pull --rebase upstream master
-    plug = pull --rebase upstream gh-pages
+  # Pull
+  pl   = pull
+  plo  = pull --rebase origin
+  plom = pull --rebase origin master
+  plog = pull --rebase origin gh-pages
+  plu  = pull --rebase upstream
+  plum = pull --rebase upstream master
+  plug = pull --rebase upstream gh-pages
 
-    # Push
-    ps   = push
-    pso  = push origin
-    psom = push origin master
-    psog = push origin gh-pages
-    psu  = push upstream
-    psum = push upstream master
-    psug = push upstream gh-pages
+  # Push
+  ps   = push
+  pso  = push origin
+  psom = push origin master
+  psog = push origin gh-pages
+  psu  = push upstream
+  psum = push upstream master
+  psug = push upstream gh-pages
 
-    # Merge request
-    mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+  # Merge request
+  mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
 
-    # Logs
-    l     = log --pretty=oneline --decorate --abbrev-commit --max-count=15
-    ll    = log --graph --pretty=format:'%Cred%h%Creset %an: %s %Creset%Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  # Logs
+  l     = log --pretty=oneline --decorate --abbrev-commit --max-count=15
+  ll    = log --graph --pretty=format:'%Cred%h%Creset %an: %s %Creset%Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 
-    # Sync
-    sync = plu && pso
+  # Sync
+  sync = plu && pso
 
-    todo              = !"git ls-files | xargs find-todo-tags | awk -F: '{ print $1,$2; print $3,$4; print $5}' | grcat conf.todo-tags "
-    ci                = commit
-    st                = status
-    br                = branch
-    ri                = rebase --interactive --autosquash
-    rb                = rebase
-    count             = !git shortlog -sn
-    lg                = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    fru               = !git fetch upstream
-    fo                = !git fetch origin
-    fro               = !git fetch origin && git rebase origin/master
-    fru               = !git fetch upstream && git rebase upstream/master
-    stup              = !git stash && git fro && git stash pop
-    type              = cat-file -t
-    dump              = cat-file -p
-    wip               = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\""
-    unwip             = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
-    head              = !"git log -n1"
-    lost              = !"git fsck | awk '/dangling commit/ {print $3}' | git show --format='SHA1: %C(yellow)%h%Creset %f' --stdin | awk '/SHA1/ {sub(\"SHA1: \", \"\"); print}'"
-    tags              = !"git tag | sort -t . -k1,1n -k 2,2n -k 3,3n -k 2,2"
-    undo              = !"git reset --soft HEAD^"
-    fixup             = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-    squash            = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-    rank-contributers = !"git shortlog -s -n --no-merges"
-    open-unmerged     = !git diff --name-only --diff-filter=U | xargs subl
-    up                = "!git remote update -p; git merge --ff-only @{u}"
-    resume            = !"git log --since=8.hours --abbrev-commit --author=\"<$(git config user.email)>\" --format=%s --reverse"
-    add-tag           = tag
-    remove-tag        = tag -d
+  todo              = !"git ls-files | xargs find-todo-tags | awk -F: '{ print $1,$2; print $3,$4; print $5}' | grcat conf.todo-tags "
+  ci                = commit
+  st                = status
+  br                = branch
+  ri                = rebase --interactive --autosquash
+  rb                = rebase
+  count             = !git shortlog -sn
+  lg                = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  fru               = !git fetch upstream
+  fo                = !git fetch origin
+  fro               = !git fetch origin && git rebase origin/master
+  fru               = !git fetch upstream && git rebase upstream/master
+  stup              = !git stash && git fro && git stash pop
+  type              = cat-file -t
+  dump              = cat-file -p
+  wip               = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\""
+  unwip             = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
+  head              = !"git log -n1"
+  lost              = !"git fsck | awk '/dangling commit/ {print $3}' | git show --format='SHA1: %C(yellow)%h%Creset %f' --stdin | awk '/SHA1/ {sub(\"SHA1: \", \"\"); print}'"
+  tags              = !"git tag | sort -t . -k1,1n -k 2,2n -k 3,3n -k 2,2"
+  undo              = !"git reset --soft HEAD^"
+  fixup             = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+  squash            = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+  rank-contributers = !"git shortlog -s -n --no-merges"
+  open-unmerged     = !git diff --name-only --diff-filter=U | xargs subl
+  up                = "!git remote update -p; git merge --ff-only @{u}"
+  resume            = !"git log --since=8.hours --abbrev-commit --author=\"<$(git config user.email)>\" --format=%s --reverse"
+  add-tag           = tag
+  remove-tag        = tag -d
 [color]
-    ui = true
-    diff = auto
-    status = auto
+  ui = true
+  diff = auto
+  status = auto
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
 [color "status"]
-    added     = cyan bold
-    branch    = cyan bold
-    changed   = magenta bold
-    deleted   = red bold
-    untracked = yellow bold
+  added     = cyan bold
+  branch    = cyan bold
+  changed   = magenta bold
+  deleted   = red bold
+  untracked = yellow bold
 [push]
   default = simple
 [core]
