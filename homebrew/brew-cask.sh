@@ -47,7 +47,7 @@ brew cask install appcleaner
 brew cask install 1clipboard
 
 # Install Nerd Fonts
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 
 # Not on cask but I want regardless.
