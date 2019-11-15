@@ -46,7 +46,7 @@ brew install screen
 brew install git
 # brew install git-lfs
 brew install terminal-notifier
-brew install nvm
+# brew install nvm
 
 brew install zsh
 brew install zsh-autosuggestions

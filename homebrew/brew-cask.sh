@@ -7,9 +7,6 @@
 
 # Install native apps
 
-brew install caskroom/cask/brew-cask
-# brew tap caskroom/versions
-
 # daily
 brew cask install spectacle
 
