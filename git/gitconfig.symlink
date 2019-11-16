@@ -15,14 +15,29 @@
   co = checkout
   cb = checkout -b
 
-  # Cherry-pick
+  # cherry-pick - apply the changes introduced by some existing commits; useful for moving small chunks of code between branches.
   cp = cherry-pick
-  cpc = cherry-pick --continue
+
+  # cherry-pick - abort the picking process
   cpa = cherry-pick --abort
 
-  #Rebase
+  # cherry-pick - continue the picking process
+  cpc = cherry-pick --continue
+
+  # rebase - forward-port local commits to the updated upstream head.
+  rb = rebase
+
+  # rebase - continue the rebasing process after resolving a conflict manually and updating the index with the resolution.
   rbc = rebase --continue
+
+  # rebase abort - cancel the rebasing process
   rba = rebase --abort
+
+  # rebase - restart the rebasing process by skipping the current patch.
+  rbs = rebase --skip
+
+  # rbi - rebase interactive on our unpushed commits.
+  ri = rebase --interactive --autosquash
 
   # Diff
   df = diff
@@ -68,8 +83,6 @@
   ci                = commit
   st                = status
   br                = branch
-  ri                = rebase --interactive --autosquash
-  rb                = rebase
   count             = !git shortlog -sn
   lg                = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   fru               = !git fetch upstream
@@ -93,6 +106,42 @@
   resume            = !"git log --since=8.hours --abbrev-commit --author=\"<$(git config user.email)>\" --format=%s --reverse"
   add-tag           = tag
   remove-tag        = tag -d
+
+  # Assume
+  #
+  # Sometimes we want to change a file in a repo, but never check in your edits.
+  # We can't use .gitignore because the file is tracked. We use update-index.
+  #
+  # If you interact with big corporate projects, such as projects in Subversion,
+  # then you might run into the need to ignore certain files which are under
+  # Subversion control, yet you need to modify them but not commit.
+  # The assume-unchanged flag comes to the rescue.
+  #
+  # Suppose we want to edit passwords.txt and for god's sake never check it in:
+  #
+  #     $ git status
+  #     modified passwords.txt
+  #     modified foo.txt
+  #
+  #     $ git assume passwords.txt
+  #     $ git status
+  #     modified foo.txt
+  #
+  #     $ git assumed
+  #     passwords.txt
+  #
+  #     $ git unassume passwords.txt
+  #     $ git status
+  #     modified passwords.txt
+  #     modified foo.txt
+  #
+  # Thanks to http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+  # Thanks to http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
+  assume   = update-index --assume-unchanged
+  unassume = update-index --no-assume-unchanged
+  assume-all = "!git st -s | awk {'print $2'} | xargs git assume"
+  unassume-all = "!git assumed | xargs git update-index --no-assume-unchanged"
+  assumed  = !"git ls-files -v | grep ^h | cut -c 3-"
 [color]
   ui = true
   diff = auto
