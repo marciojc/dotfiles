@@ -158,7 +158,7 @@
   #
   # And seemingly no changes to your working tree.
   #
-  snapshot = !git stash push "snapshot: $(date)" && git stash apply "stash@{0}"
+  snapshot = !"git stash push -m \"snapshot: $(date)\" && git stash apply \"stash@{0}\""
 [color]
   ui = true
   diff = auto
