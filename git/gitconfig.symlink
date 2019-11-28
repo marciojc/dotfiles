@@ -8,8 +8,12 @@
   a = add
   # Commit
   cm = commit -m
+
+  # commit - amend the tip of the current branch rather than creating a new commit.
   ca = commit --amend
-  can = commit --amend --no-edit
+
+  # commit - amend the tip of the current branch rather than creating a new commit.
+  cane = commit --amend --no-edit
 
   # Checkout
   co = checkout
