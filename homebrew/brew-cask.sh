@@ -8,7 +8,7 @@
 # Install native apps
 
 # daily
-brew cask install spectacle
+brew cask install rectangle
 
 # dev
 brew cask install iterm2
