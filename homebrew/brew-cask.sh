@@ -1,54 +1,46 @@
 #!/bin/bash
 
-
-# to maintain cask ....
-#     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup`
-
-
 # Install native apps
 
 # daily
-brew cask install rectangle
+brew install --cask rectangle
 
 # dev
-brew cask install iterm2
-brew cask install sublime-text
-# brew cask install visual-studio-code
-brew cask install imageoptim
-brew cask install sequel-pro
-brew cask install postman
-# brew cask install devdogs
-# brew cask install gimp
-brew cask install slack
-brew cask install microsoft-teams
-brew cask install docker
-# brew cask install dropbox
-brew cask install sketch
-# brew cask install android-studio
+brew install --cask iterm2
+brew install --cask sublime-text
+# brew install --cask visual-studio-code
+brew install --cask imageoptim
+brew install --cask sequel-pro
+brew install --cask postman
+# brew install --cask gimp
+brew install --cask slack
+brew install --cask microsoft-teams
+brew install --cask docker
+brew install --cask sketch
+# brew install --cask android-studio
 
-# brew cask install fork
-# brew cask install virtualbox
-# brew cask install virtualbox-extension-pack
-# brew cask install cyberduck
-# brew cask install tunnelblick
+brew install --cask fork
+# brew install --cask virtualbox
+# brew install --cask virtualbox-extension-pack
+# brew install --cask cyberduck
 
 # browsers
-brew cask install google-chrome
-brew cask install firefox
-# brew cask install google-chrome-canary
-# brew cask install firefoxnightly
-# brew cask install webkit-nightly
-# brew cask install chromium
-# brew cask install torbrowser
+brew install --cask google-chrome
+brew install --cask firefox
+# brew install --cask google-chrome-canary
+# brew install --cask firefoxnightly
+# brew install --cask webkit-nightly
+# brew install --cask chromium
+# brew install --cask torbrowser
 
 # others
-brew cask install spotify
-# brew cask install appcleaner
-# brew cask install 1clipboard
+brew install --cask spotify
+# brew install --cask appcleaner
+# brew install --cask 1clipboard
 
 # Install Nerd Fonts
 brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
+brew install --cask font-hack-nerd-font
 
 # Not on cask but I want regardless.
 
@@ -59,12 +51,12 @@ brew cask install font-hack-nerd-font
 # See https://github.com/sindresorhus/quick-look-plugins
 
 # Preview source code files with syntax highlighting
-brew cask install qlcolorcode
+brew install --cask qlcolorcode
 # Preview plain text files without or with unknown file extension. Example: README, CHANGELOG, index.styl, etc.
-brew cask install qlstephen
+brew install --cask qlstephen
 # Preview JSON files
-brew cask install quicklook-json
-brew cask install qlimagesize
+brew install --cask quicklook-json
+brew install --cask qlimagesize
 
 # Remove outdated versions from the cellar
 brew cleanup
