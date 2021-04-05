@@ -6,7 +6,8 @@
 [alias]
   # Add
   a = add
-  # Commit
+
+  # commit with a message
   cm = commit -m
 
   # commit - amend the tip of the current branch rather than creating a new commit.
