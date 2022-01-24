@@ -10,7 +10,7 @@ brew install --cask iterm2
 brew install --cask sublime-text
 # brew install --cask visual-studio-code
 brew install --cask imageoptim
-brew install --cask sequel-pro
+brew install --cask sequel-ace
 brew install --cask postman
 # brew install --cask gimp
 brew install --cask slack
