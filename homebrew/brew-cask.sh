@@ -35,8 +35,8 @@ brew install --cask firefox
 
 # others
 brew install --cask spotify
-# brew install --cask appcleaner
-# brew install --cask 1clipboard
+brew install --cask appcleaner
+brew install --cask maccy
 
 # Install Nerd Fonts
 brew tap homebrew/cask-fonts
