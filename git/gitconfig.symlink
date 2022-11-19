@@ -16,6 +16,14 @@
   # commit - amend the tip of the current branch rather than creating a new commit.
   cane = commit --amend --no-edit
 
+  # Switch
+  sw = switch
+  swc = switch -c
+
+  # Restore
+  rt = restore
+  rts = restore --staged
+
   # Checkout
   co = checkout
   cb = checkout -b
