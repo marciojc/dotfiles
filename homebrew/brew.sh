@@ -50,6 +50,7 @@ brew install git
 # brew install git-lfs
 brew install terminal-notifier
 # brew install nvm
+brew install exa
 
 brew install zsh
 brew install zsh-autosuggestions
