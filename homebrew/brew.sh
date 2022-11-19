@@ -56,5 +56,7 @@ brew install zsh
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 
+brew install jandedobbeleer/oh-my-posh/oh-my-posh
+
 # Remove outdated versions from the cellar
 brew cleanup
